@@ -1,3 +1,46 @@
+// ✅ 預先載入所有圖片，避免點擊卡頓
+const preloadImages = [
+  "start",
+  "resultpage",
+  "enter",
+  "result",
+  "again",
+  "1A",
+  "1B",
+  "1C",
+  "1D",
+  "2A",
+  "2B",
+  "2C",
+  "2D",
+  "3A",
+  "3B",
+  "3C",
+  "3D",
+  "4A",
+  "4B",
+  "4C",
+  "4D",
+  "5A",
+  "5B",
+  "5C",
+  "5D",
+  "6A",
+  "6B",
+  "6C",
+  "6D",
+  "cat",
+  "fox",
+  "lion",
+  "sheep",
+  "turtle",
+  "elephant",
+];
+
+preloadImages.forEach((name) => {
+  const img = new Image();
+  img.src = `images/${name}.png`;
+});
 const questions = [
   {
     image: "Q1",
