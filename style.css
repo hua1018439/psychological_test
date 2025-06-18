@@ -1,0 +1,57 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #3a5b58;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+
+  overscroll-behavior: none; /* ✅ 防止彈性滑動（mac/手機） */
+  touch-action: none; /* ✅ 禁止觸控捲動 */
+}
+
+#app {
+  position: relative;
+  width: 375px;
+  height: 667px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+#screen {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* ✅ 圖片完全填滿 app 容器 */
+}
+
+#buttons {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.button-img {
+  max-width: 75%;
+  height: auto;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.button-img:hover {
+  transform: scale(1.08);
+}
+
+.button-img:active {
+  transform: scale(0.95);
+}
