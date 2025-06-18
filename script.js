@@ -89,7 +89,18 @@ function showResultPage() {
 }
 
 function showFinalResult() {
-  const final = animals.reduce((a, b) => (score[a] >= score[b] ? a : b));
+  // 找出最高分
+  const maxScore = Math.max(...Object.values(score));
+
+  // 把所有等於最高分的動物收集起來
+  const topAnimals = Object.entries(score)
+    .filter(([_, val]) => val === maxScore)
+    .map(([key]) => key);
+
+  // 隨機從 topAnimals 中選一個
+  const final = topAnimals[Math.floor(Math.random() * topAnimals.length)];
+
+  // 顯示結果
   screen.src = `images/${final}.png`;
   clearButtons();
   createButton("again", resetQuiz);
