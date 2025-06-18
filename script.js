@@ -1,10 +1,15 @@
-// ✅ 預先載入所有圖片，避免點擊卡頓
 const preloadImages = [
   "start",
   "resultpage",
   "enter",
   "result",
   "again",
+  "Q1",
+  "Q2",
+  "Q3",
+  "Q4",
+  "Q5",
+  "Q6",
   "1A",
   "1B",
   "1C",
